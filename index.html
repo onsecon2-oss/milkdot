@@ -27,7 +27,7 @@
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS 17.0 이상",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
-  "description": "좌우 모유 타이머와 분유 기록을 한 타임라인에서 관리하는 iOS 수유 기록 앱. 다이나믹 아일랜드, 잠금화면, 홈 위젯을 무료로 제공합니다."
+  "description": "좌우 모유 타이머와 분유 기록을 한 타임라인에서 관리하는 iOS 수유 기록 앱. 다이나믹 아일랜드, 잠금화면, 홈 위젯을 무료로 제공하며, 수면 기록과 평소와 비교하는 분석을 지원합니다."
 }
 </script>
 
@@ -302,6 +302,19 @@ details p{margin-top:14px;font-size:15px;color:var(--muted)}
 
 footer{padding:40px 0;font-size:14px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
+
+/* ── 최근 업데이트 ── */
+.updates{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.upd-meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0 44px}
+.upd-meta span{font-size:13px;color:var(--muted);background:var(--cream);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+.upd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:860px){.upd-grid{grid-template-columns:1fr}}
+.upd-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 24px}
+.upd-card h3{font-size:18px;margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.upd-card p{font-size:15px;color:var(--muted)}
+.upd-card ul{margin:10px 0 0 18px;font-size:14.5px;color:var(--muted)}
+.upd-card li{margin-bottom:4px}
+.upd-foot{margin-top:28px;font-size:13.5px;color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
@@ -313,6 +326,7 @@ footer a{color:var(--muted)}
       <a href="#island">잠금화면</a>
       <a href="#why">왜 만들었나</a>
       <a href="#features">기능</a>
+      <a href="#updates">업데이트</a>
       <a href="#screens">화면</a>
       <a href="#faq">자주 묻는 질문</a>
     </nav>
@@ -323,7 +337,7 @@ footer a{color:var(--muted)}
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="badge"><i></i> iOS 앱 · 출시 준비 중</div>
+      <div class="badge"><i></i> iOS 앱 · 비공개 테스트 중</div>
       <h1>새벽 세 시,<br><span class="hl">화면을 켜지 않고도</span><br>수유 시간을 확인하세요.</h1>
       <p class="lead">
         좌우 모유 타이머와 분유 기록을 한 타임라인에서.<br>
@@ -533,6 +547,68 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<!-- ─────────── 최근 업데이트 ─────────── -->
+<section class="updates" id="updates">
+  <div class="wrap">
+    <h2 class="center">최근 업데이트 <span class="new-badge">NEW</span></h2>
+    <p class="sub center">TestFlight 테스트에서 받은 의견을 바로 반영하고 있습니다.</p>
+    <div class="upd-meta">
+      <span>2026년 10월 14일</span>
+      <span>테스트 빌드 8</span>
+      <span>현재는 초대한 가족·지인 대상 비공개 테스트입니다</span>
+    </div>
+
+    <div class="upd-grid">
+      <div class="upd-card">
+        <h3>😴 아기 수면 기록</h3>
+        <p>수면 시작을 누르면 잠금화면과 다이나믹 아일랜드에 <b>자는 중</b>이 뜨고, 앱을 열지 않고 <b>“깼어요”</b>를 눌러 저장합니다.</p>
+        <ul>
+          <li>“몇 시에 잤나요 → 언제 깼나요” 순서로 지난 수면 기록</li>
+          <li>시각을 직접 고를 수도 있습니다</li>
+          <li>오늘 수면 합계가 홈과 기록 목록에 나옵니다</li>
+        </ul>
+      </div>
+
+      <div class="upd-card">
+        <h3>📊 평소와 비교하는 분석</h3>
+        <p>오늘 <b>지금 시각까지</b>의 수유 횟수·분유량·모유 시간·수면을 지난 7일 같은 시각까지의 평균과 비교합니다. 평소보다 적은지, 비슷한지, 많은지 색으로 보여줍니다.</p>
+        <ul>
+          <li>기록이 3일 이상 쌓이면 비교가 시작됩니다</li>
+          <li>AI가 아니라, 우리 아기 기록만으로 기기 안에서 계산하는 통계입니다</li>
+          <li>의학적 판단이 아닌 참고용입니다</li>
+        </ul>
+      </div>
+
+      <div class="upd-card">
+        <h3>🍼 모유만 · 분유만 · 혼합</h3>
+        <p>설정에서 수유 방식을 고르면 쓰지 않는 버튼이 사라지고, 남은 버튼이 그 자리를 넓게 차지해 더 크게 보입니다. 위젯과 다이나믹 아일랜드의 버튼도 같이 바뀝니다.</p>
+      </div>
+
+      <div class="upd-card">
+        <h3>📅 태어난 날과 D+N</h3>
+        <p>처음 시작할 때 아기 이름과 태어난 날을 넣으면 홈의 제목 옆에 <b>D+45</b>처럼 표시됩니다. 건너뛰어도 설정에서 언제든 넣을 수 있습니다. 태어난 날을 1일로 세어 D+100이 백일입니다.</p>
+      </div>
+
+      <div class="upd-card">
+        <h3>🕒 대변 기록에 시간 선택</h3>
+        <p>기본은 <b>방금</b>이라 평소에는 색만 누르면 됩니다. 나중에 적을 때는 15분 전부터 2시간 전까지 누르거나, 날짜와 시각을 직접 고를 수 있습니다.</p>
+      </div>
+
+      <div class="upd-card">
+        <h3>✋ 화면 누르는 횟수 줄이기</h3>
+        <ul>
+          <li>지난 수유 기록에 <b>＋/－ 직접 입력</b>이 추가되어 많은 양도 쉽게 맞춥니다</li>
+          <li>“기록하기” 버튼을 화면 아래 가운데에 고정했습니다</li>
+          <li>다이나믹 아일랜드를 펼쳐 <b>✕</b>를 누르면 이번만 숨겨지고, 다음 기록이 생기면 다시 나옵니다</li>
+          <li>기록 목록 오른쪽 위 버튼이 <b>“분석하기”</b>로 바뀌었습니다</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="upd-foot">수면 기록은 아직 이 기기에만 저장되고, 부부 공유로 넘어가지 않습니다. 이 점은 다음 단계에서 다룰 예정입니다.</p>
+  </div>
+</section>
+
 <!-- ─────────── 스크린샷 ─────────── -->
 <section class="shots" id="screens">
   <div class="wrap">
@@ -572,6 +648,7 @@ footer a{color:var(--muted)}
       <li><b>다이나믹 아일랜드는 iPhone 14 Pro 이상에서 보입니다.</b><span>그 외 기종에서는 잠금화면 표시와 홈 화면 위젯으로 동작합니다.</span></li>
       <li><b>잠금화면 표시는 최대 8시간 뒤 사라집니다.</b><span>iOS 자체 제한입니다. 앱을 다시 열면 자동으로 새로 띄우고, 그 사이에는 홈 화면 위젯이 역할을 대신합니다.</span></li>
       <li><b>부부 공유는 정식 버전에서 지원해요.</b><span>iCloud 공유는 개발 중 아직 두 대의 실기기로 충분히 검증하지 못했습니다. 베타 테스트에서 먼저 확인한 뒤 열 예정입니다.</span></li>
+      <li><b>수면 기록과 분석은 아직 이 기기에만 있습니다.</b><span>수면 기록은 부부 공유에 아직 연결되지 않았습니다. “평소와 비교” 분석은 AI가 아니라 기록으로 계산한 통계이고, 아기를 다른 아기와 비교하지 않습니다.</span></li>
       <li><b>대변 색 안내는 진단이 아닙니다.</b><span>부모가 고른 색을 기준으로 소아과 진료를 권하는 참고 안내예요. 걱정되면 색과 상관없이 의료진과 상담해 주세요.</span></li>
       <li><b>수유 시간 예측은 의료 정보가 아닙니다.</b><span>기록된 간격을 계산한 참고용 값입니다. 아기 상태에 대한 판단은 전문가와 상의해 주세요.</span></li>
     </ul>
